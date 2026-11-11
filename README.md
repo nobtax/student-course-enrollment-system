@@ -1,62 +1,91 @@
-# Student Course Enrollment Management System
+# Student Course Enrollment System
 
-An object-oriented Student, Course, and Enrollment Management System with two interactive user interfaces.
+This is my Student, Course, and Enrollment project using Python and object-oriented programming (OOP). The program allows users to add students, create courses, enroll students in courses, and view all the records.
 
-## Project Versions
+I made two versions of the project: a desktop version using Tkinter and a web version using HTML, CSS, JavaScript, and Flask.
 
-### 1. Desktop Application — Python Tkinter
-Located in `desktop-version/`.
+## Features
 
-A graphical desktop application for creating students, managing courses, enrolling students, and viewing all records.
+- Add new students with their ID, name, and email
+- Add courses with course ID, title, and instructor
+- Enroll students in available courses
+- View all students, courses, and enrollments
+- Remove students, courses, or enrollments
+- Check for duplicate records
+- Save records so they are still available after closing the program
 
-**Run:**
+## Project Files
+
+```text
+student-course-enrollment-system/
+├── README.md
+├── desktop-version/
+│   └── student_course_enrollment/
+│       ├── main.py
+│       ├── models.py
+│       ├── test_system.py
+│       └── README.md
+└── web-version/
+    └── student_enrollment_web/
+        ├── app.py
+        ├── models.py
+        ├── test_system.py
+        ├── requirements.txt
+        ├── README.md
+        ├── templates/
+        └── static/
+```
+
+## Desktop Version
+
+This version uses Python Tkinter for the interface. It has different sections for students, courses, and enrollments.
+
+To run it, open the terminal in the main project folder and enter:
+
 ```bash
-cd desktop-version
+cd desktop-version/student_course_enrollment
 python main.py
 ```
 
-### 2. Web Application — HTML, CSS, JavaScript, and Python Flask
-Located in `web-version/`.
+## Web Version
 
-A browser-based application with a dashboard, interactive forms, searchable records, and enrollment management.
+This version runs in a web browser. I used HTML and CSS for the page, JavaScript for the interactive features, and Python Flask for the backend.
 
-**Run:**
+To run it, open a terminal in the main project folder and enter:
+
 ```bash
-cd web-version
+cd web-version/student_enrollment_web
 python -m pip install -r requirements.txt
 python app.py
 ```
 
-Open `http://127.0.0.1:5000` in a browser.
+Then open this address in your browser:
 
-## Features
+http://127.0.0.1:5000
 
-- Create and view student records
-- Create and view course records
-- Enroll students in courses
-- Display all students, courses, and enrollments
-- Object-oriented Student, Course, and Enrollment classes
-- Input validation and duplicate prevention
-- Persistent data storage
+## OOP Classes
+
+I used the following classes:
+
+- **Student:** Stores student ID, name, and email.
+- **Course:** Stores course ID, title, and instructor.
+- **Enrollment:** Connects a student to a course.
+- **EnrollmentSystem:** Handles adding students, courses, and enrollments.
 
 ## Testing
 
-Each version includes `test_system.py`.
+I included a `test_system.py` file in both versions to test the main functions.
 
-Run the tests from the corresponding version's folder:
+To run the tests, go into either version's folder and enter:
 
 ```bash
 python -m unittest -v
 ```
 
-## Technologies
+## Requirements
 
-- Python
-- Object-Oriented Programming
-- Tkinter
-- HTML, CSS, JavaScript
-- Flask
+- Python 3.10 or newer
+- Tkinter for the desktop version (included with most Python installations)
+- Flask for the web version (installed using `requirements.txt`)
 
-## Notes
-
-Both applications are independent implementations of the same enrollment system. Each can be run separately, and their saved data is not shared.
+Both versions work separately and save their own data.
